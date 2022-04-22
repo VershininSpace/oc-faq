@@ -1,0 +1,18 @@
+columns:
+    id:
+        label: vershininspace.faq::lang.models.question.columns.id
+        type: number
+        searchable: false
+        sortable: true
+    title:
+        label: vershininspace.faq::lang.models.question.columns.title
+        type: text
+        searchable: true
+        sortable: true
+    category_title:
+        label: vershininspace.faq::lang.models.question.fields.category
+        type: text
+        relation: category
+        select: title
+        searchable: true
+        sortable: true

@@ -1,0 +1,25 @@
+fields:
+    title:
+        label: vershininspace.faq::lang.models.question.fields.title
+        span: left
+        required: 1
+        type: text
+    slug:
+        label: vershininspace.faq::lang.models.question.fields.slug
+        span: right
+        preset:
+            field: title
+            type: slug
+        type: text
+    category:
+        label: vershininspace.faq::lang.models.question.fields.category
+        nameFrom: title
+        descriptionFrom: description
+        span: full
+        type: relation
+        emptyOption: 'Без Категории'
+    description:
+        label: vershininspace.faq::lang.models.question.fields.description
+        size: large
+        span: full
+        type: richeditor

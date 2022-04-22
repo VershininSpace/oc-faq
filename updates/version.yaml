@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table vershininspace_faq_categories'
+    - builder_table_create_vershininspace_faq_categories.php
+1.0.3:
+    - 'Created table vershininspace_faq_categories'
+    - builder_table_create_vershininspace_faq_categories_2.php
+1.0.4:
+    - 'Created table vershininspace_faq_questions'
+    - builder_table_create_vershininspace_faq_questions.php
+1.0.5:
+    - 'Updated table vershininspace_faq_questions'
+    - builder_table_update_vershininspace_faq_questions.php

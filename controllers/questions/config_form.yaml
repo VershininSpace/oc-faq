@@ -1,0 +1,10 @@
+name: 'vershininspace.faq::lang.question.name'
+form: $/vershininspace/faq/models/question/fields.yaml
+modelClass: VershininSpace\Faq\Models\Question
+defaultRedirect: vershininspace/faq/questions
+create:
+    redirect: 'vershininspace/faq/questions/update/:id'
+    redirectClose: vershininspace/faq/questions
+update:
+    redirect: vershininspace/faq/questions
+    redirectClose: vershininspace/faq/questions

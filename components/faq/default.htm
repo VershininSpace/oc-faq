@@ -1,0 +1,63 @@
+
+{% set categories = __SELF__.getCategories() %}
+<!-- Start -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-12">
+                <div class="card section-title bg-white p-4 shadow rounded border-0">
+                    <ul class="nav nav-pills nav-justified flex-column bg-transparent mb-0" id="pills-tab" role="tablist">
+                        {% if categories is not empty %}
+                            {% for category in categories %}                        
+                            <li class="nav-item mt-3">
+                                <a class="nav-link rounded shadow {{ loop.index == 1  ? 'active' : '' }}" id="pills-{{ category.slug }}-tab" data-bs-toggle="pill" href="#pills-{{ category.slug }}" role="tab" aria-controls="pills-{{ category.slug }}" aria-selected="false">
+                                    <div class="text-start py-1 px-3">
+                                        <h6 class="mb-0">{{ category.title }}</h6>
+                                    </div>
+                                </a><!--end nav link-->
+                            </li><!--end nav item-->
+                            {% endfor %}
+                        {% endif %}
+                    </ul><!--end nav pills-->
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                <div class="tab-content" id="pills-tabContent">                    
+                    {% if categories is not empty %}
+                    {% for category in categories %}           
+                    <div class="tab-pane fade {{ loop.index == 1  ? 'active show' : '' }}" id="pills-{{ category.slug }}" role="tabpanel" aria-labelledby="pills-{{ category.slug }}-tab">
+                        <div class="section-title" id="{{ category.slug }}">
+                            <h4>{{ category.title }}</h4>
+                        </div>
+
+                        <div class="accordion mt-4 pt-2" id="{{ category.slug }}question">
+                            {% if category.questions is not empty %}
+                            {% for question in category.questions %}   
+                            <div class="accordion-item rounded border-0 shadow mt-3">
+                                <h2 class="accordion-header" id="heading-{{  question.slug }}">
+                                    <button class="accordion-button border-0 bg-white {{ loop.index == 1  ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ question.slug }}"
+                                        aria-expanded="{{ loop.index == 1  ? 'true' : 'false' }}" aria-controls="collapse-{{ question.slug }}">
+                                        {{ question.title }}
+                                    </button>
+                                </h2>
+                                <div id="collapse-{{ question.slug }}" class="accordion-collapse border-0 collapse {{ loop.index == 1  ? 'show' : '' }}" aria-labelledby="heading-{{ question.slug }}"
+                                    data-bs-parent="#{{ category.slug }}question">
+                                    <div class="accordion-body text-muted bg-white">
+                                        {{ question.description|raw }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div><!--end teb pane-->
+                    {% endfor %}
+                    {% endif %}
+
+                   
+                </div><!--end tab content-->
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->

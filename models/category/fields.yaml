@@ -1,0 +1,13 @@
+fields:
+    title:
+        label: vershininspace.faq::lang.models.category.fields.title
+        span: left
+        required: 1
+        type: text
+    slug:
+        label: vershininspace.faq::lang.models.category.fields.slug
+        span: right
+        preset:
+            field: title
+            type: slug
+        type: text

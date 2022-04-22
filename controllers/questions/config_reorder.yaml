@@ -1,0 +1,5 @@
+title: 'vershininspace.faq::lang.question.reorder'
+modelClass: VershininSpace\Faq\Models\Question
+toolbar:
+    buttons: reorder_toolbar
+nameFrom: title

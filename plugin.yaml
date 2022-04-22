@@ -1,0 +1,20 @@
+plugin:
+    name: 'vershininspace.faq::lang.plugin.name'
+    description: 'vershininspace.faq::lang.plugin.description'
+    author: Vershinin
+    icon: oc-icon-info-circle
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'vershininspace.faq::lang.menu.faq'
+        url: /
+        icon: icon-info-circle
+        sideMenu:
+            side-menu-item:
+                label: 'vershininspace.faq::lang.menu.categories'
+                url: vershininspace/faq/categories
+                icon: icon-tag
+            side-menu-item2:
+                label: 'vershininspace.faq::lang.menu.questions'
+                url: vershininspace/faq/questions
+                icon: icon-question-circle

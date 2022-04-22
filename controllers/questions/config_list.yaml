@@ -1,0 +1,15 @@
+list: $/vershininspace/faq/models/question/columns.yaml
+modelClass: VershininSpace\Faq\Models\Question
+title: 'vershininspace.faq::lang.question.list_title'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+structure:
+    showReorder: true
+    showTree: false
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'vershininspace/faq/questions/update/:id'

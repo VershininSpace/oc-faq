@@ -1,0 +1,10 @@
+name: 'vershininspace.faq::lang.category.name'
+form: $/vershininspace/faq/models/category/fields.yaml
+modelClass: VershininSpace\Faq\Models\Category
+defaultRedirect: vershininspace/faq/categories
+create:
+    redirect: 'vershininspace/faq/categories/update/:id'
+    redirectClose: vershininspace/faq/categories
+update:
+    redirect: vershininspace/faq/categories
+    redirectClose: vershininspace/faq/categories

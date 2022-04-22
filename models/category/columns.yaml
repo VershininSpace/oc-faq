@@ -1,0 +1,11 @@
+columns:
+    id:
+        label: vershininspace.faq::lang.models.category.columns.id
+        type: number
+        searchable: false
+        sortable: true
+    title:
+        label: vershininspace.faq::lang.models.category.columns.title
+        type: text
+        searchable: true
+        sortable: true
